@@ -8,8 +8,6 @@
  *
  * @author glauc
  */
-package designpatterns.command.example;
-
 import designpatterns.command.example.editor.Editor;
 
 public class Demo {
