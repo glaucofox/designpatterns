@@ -1,16 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package designpatterns.behavioral.command.example.commands;
 
 import java.util.Stack;
 
-/**
- *
- * @author glauc
- */
 public class CommandHistory {
     
     private Stack<Command> history = new Stack<>();

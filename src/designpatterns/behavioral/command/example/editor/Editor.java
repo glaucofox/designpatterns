@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package designpatterns.behavioral.command.example.editor;
 
 import designpatterns.behavioral.command.example.commands.*;
@@ -14,11 +9,6 @@ import java.awt.event.ActionListener;
 import javax.swing.BoxLayout;
 import javax.swing.JTextArea;
 
-
-/**
- *
- * @author glauc
- */
 public class Editor {
     public JTextArea textfield;
     public String clipboard;
@@ -45,29 +35,34 @@ public class Editor {
                 executeCommand(new CopyCommand(editor));
             }
         });
+
         ctrlX.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 executeCommand(new CutCommand(editor));
             }
         });
+
         ctrlV.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 executeCommand(new PasteCommand(editor));
             }
         });
+
         ctrlZ.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 undo();
             }
         });
+
         buttons.add(ctrlC);
         buttons.add(ctrlX);
         buttons.add(ctrlV);
         buttons.add(ctrlZ);
         content.add(buttons);
+
         frame.setSize(450, 200);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
