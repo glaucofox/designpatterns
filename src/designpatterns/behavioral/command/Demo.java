@@ -1,4 +1,4 @@
-package designpatterns.behavioral.command.example;
+package designpatterns.behavioral.command;
 
 import designpatterns.behavioral.command.example.editor.Editor;
 
