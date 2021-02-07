@@ -1,4 +1,4 @@
-package designpatterns.creational.abstract_factory.example;
+package designpatterns.creational.abstract_factory;
 
 import designpatterns.creational.abstract_factory.example.app.Application;
 import designpatterns.creational.abstract_factory.example.factories.GUIFactory;

@@ -1,4 +1,4 @@
-package designpatterns.creational.builder.example;
+package designpatterns.creational.builder;
 
 import designpatterns.creational.builder.example.builders.CarBuilder;
 import designpatterns.creational.builder.example.builders.CarManualBuilder;
