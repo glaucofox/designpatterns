@@ -1,4 +1,4 @@
-package designpatterns.creational.factory.example;
+package designpatterns.creational.factory;
 
 import designpatterns.creational.factory.example.factory.Dialog;
 import designpatterns.creational.factory.example.factory.HtmlDialog;
