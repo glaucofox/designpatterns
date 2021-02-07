@@ -1,5 +1,7 @@
 package designpatterns.creational.prototype.example.shapes;
 
+import java.awt.Color;
+
 public class Circle extends Shape {
     
     public int radius;
@@ -14,7 +16,10 @@ public class Circle extends Shape {
         }
     }
 
-    @Override
+    public Circle(int i, int j, int k, Color blue) {
+	}
+
+	@Override
     public Shape clone() {
         return new Circle(this);
     }
