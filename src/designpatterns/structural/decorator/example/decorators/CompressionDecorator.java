@@ -56,14 +56,21 @@ public class CompressionDecorator extends DataSourceDecorator
         }
     }
 
-    private String decompress(String stringData) 
-    {
+    private String decompress(String stringData) {
         byte[] data = Base64.getDecoder().decode(stringData);
         try {
             InputStream in = new ByteArrayInputStream(data);
             InflaterInputStream iin = new InflaterInputStream(in);
             ByteArrayOutputStream bout = new ByteArrayOutputStream(512);
-        } catch (Exception ex) {
+            int b;
+            while ((b = iin.read()) != -1) {
+                bout.write(b);
+            }
+            in.close();
+            iin.close();
+            bout.close();
+            return new String(bout.toByteArray());
+        } catch (IOException ex) {
             return null;
         }
     }
